@@ -1,0 +1,14 @@
+$white: #fff;
+$blue: #2196f3;
+$grey: #f5f4fa;
+$dark-grey: #afb1b8;
+$text-color: #212121;
+$footer-color: #2f303a;
+
+%icon-size {
+  height: 44px;
+  width: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
