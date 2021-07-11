@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+//! font-family: 'Raleway', sans-serif;
+//! font-family: 'Roboto', sans-serif; 
+
+.regular {
+	width: 320px;
+	margin: 60px auto;
+	&__title {
+		font-family: 'Roboto', sans-serif;
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 33px;
+		text-align: center;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	&__wrapper {
+		margin: 0 auto;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	&__card {
+		border: 2px solid $dark-grey;
+		border-radius: 4px;
+		height: 92px;
+    width: 45%;
+    margin: 8px;
+		transition: 0.5s all;
+		border-radius: 4px;
+		opacity: 0.8;
+		cursor: pointer;
+		&-img {
+			fill: $dark-grey;
+			position: relative;
+			align-items: center;
+			opacity: 0.8;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: 0.5s all;
+		}
+	}
+	&__card:hover {
+		opacity: 1;
+		border: 2px solid $blue;
+	}
+	&__card:hover &__card-img {
+		opacity: 1;
+		fill: $blue;
+	}
+	@media screen and (min-width: 375px) {
+		width: 375px;
+		&__card {
+			width: 43.75%;
+			margin: 20px 10px 0 10px;
+		}
+	}
+	@media screen and (min-width: 425px) {
+		width: 425px;
+		&__card {
+			width: 43.75%;
+			margin: 20px 10px 0 15px;
+		}
+		
+	}
+	@media screen and (min-width: 480px) {
+		width: 480px;
+		&__card {
+			width: 43.75%;
+			margin: 30px 15px 0 15px;
+		}
+	}
+	@media screen and (min-width: 768px) {
+		width: 768px;
+		&__title {
+			font-size: 48px;
+		}
+		&__card {
+			width: 29.42%;
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		width: 1024px;
+		&__title {
+			font-size: 56px;
+		}
+		&__card {
+			width: 14%;
+			margin: 30px 15px 0px 10px;
+		}
+	}
+	@media screen and (min-width: 1366px) {
+		width: 1366px;
+		&__title {
+			font-size: 48px;
+		}
+		&__card {
+			width: 30%;
+			margin: 30px 15px 0 15px;
+		}
+	}
+	@media screen and (min-width: 1440px) {
+		width: 1440px;
+		&__title {
+			font-size: 56px;
+		}
+		&__card {
+			width:11.8055%;
+		}
+	}
+	@media screen and (min-width: 2560px) {
+		width: 2560px;
+		&__title {
+			font-size: 72px;
+		}
+		&__card {
+			width: 15%;
+		}
+	}
+}
