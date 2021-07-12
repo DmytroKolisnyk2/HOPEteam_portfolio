@@ -14,6 +14,7 @@
   }
 }
 .address__email {
+  transition: 200ms linear;
   font-size: 20px;
   font-weight: 500;
   font-family: $main-font;
@@ -48,6 +49,7 @@
   }
 }
 .address__phone {
+  transition: 200ms linear;
   display: inline-block;
   font-size: 28px;
   font-weight: 500;
@@ -81,8 +83,6 @@
   @media screen and (min-width: 1200px) {
     font-size: 14px;
   }
-}
-.address__item {
 }
 .address__link {
   font-size: 16px;
@@ -240,13 +240,6 @@ ul {
     margin-right: 3px;
   }
 }
-
-.menu {
-}
-// .menu__item {
-//   display: flex;
-//   align-items: center;
-// }
 .menu__link {
   display: inline-block;
   line-height: 46px;

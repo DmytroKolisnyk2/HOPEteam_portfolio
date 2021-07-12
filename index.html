@@ -33,7 +33,9 @@
             <li class="address__item"><a href="#" class="address__link">Facebook</a></li>
             <li class="address__item"><a href="#" class="address__link address__link--last">LinkedIn</a></li>
           </ul>
-          <img class="address__close address__close--js" alt="close" src="./img/close_24px.svg">
+          <svg class="address__close address__close--js">
+            <use href="./img/header-ico.svg#icon-close"></use>
+          </svg>
         </address>
       </div>
       <button class="header__burger header__burger--js" type="button">
@@ -50,9 +52,49 @@
       <div class="start__content-wrapper">
         <h2 class="start__headline">Effective solutions for your site
         </h2>
-        <button type="button" class="start__btn">Order service</button>
+        <button type="button" class="start__btn open-form--js">Order service</button>
       </div>
-      <a href="#" class="start__arrow-down"></a>
+      <a href="#" class="start__arrow-down"><svg class="svg">
+          <use href="./img/header-ico.svg#icon-cheveron-down"></use>
+        </svg></a>
+    </section>
+    <section class="form-modal form-modal--hidden">
+      <div class="form-modal__overlay">
+        <form action="#" class="form" method="GET">
+          <svg class="form__close form__close--js">
+            <use href="./img/header-ico.svg#icon-close"></use>
+          </svg>
+          <h2 class="form__headline">Leave your details, we will call you back soon</h2>
+          <div class="form__input-wrapper"><input id="name" type="text" class="form__text">
+            <label for="name" class="form__label">Your name</label>
+            <svg class="form__ico">
+              <use href="./img/header-ico.svg#icon-contact"></use>
+            </svg>
+          </div>
+          <div class="form__input-wrapper"><input id="phone" type="tel" class="form__text">
+            <label for="phone" class="form__label">Phone number</label>
+            <svg class="form__ico">
+              <use href="./img/header-ico.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <div class="form__input-wrapper"><input id="email" type="email" class="form__text">
+            <label for="email" class="form__label">E-mail</label>
+            <svg class="form__ico">
+              <use href="./img/header-ico.svg#icon-envelope"></use>
+            </svg>
+          </div>
+          <div class="form__textarea-wrapper">
+            <textarea name="comment" id="comment" class="form__textarea"
+              placeholder="Type your comment here..."></textarea>
+            <label for="comment" class="form__label">Comment</label>
+          </div>
+          <div class="form__checkbox-wrapper">
+            <input id="checkbox" type="checkbox" class="form__checkbox">
+            <label for="checkbox" class="form__checkbox-label">I agree to the processing of personal data
+            </label>
+          </div>
+          <button class="form__submit" type="submit">Submit</button>
+        </form></div>
     </section>
   </main>
   <script type="module" src="./js/script.js"></script>
