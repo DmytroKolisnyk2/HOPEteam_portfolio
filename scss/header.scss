@@ -249,7 +249,7 @@ ul {
   color: $text-color;
   transition: 200ms linear;
   margin-bottom: 35px;
-  &:hover {
+  &:hover ,&--active{
     color: $blue;
   }
   @media (min-width: 768px) {
@@ -269,7 +269,7 @@ ul {
       bottom: -17px;
     }
     &:hover::after,
-    :target::after {
+    &--active::after {
       background-color: $blue;
     }
   }
