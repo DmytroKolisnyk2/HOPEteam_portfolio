@@ -121,3 +121,237 @@
 		}
 	}
 }
+.footer {
+	background-color: $footer-color;
+	width: 100%;
+	margin: 0 auto;
+	padding: 60px 0px;
+	&__title {
+		text-align: center;
+		font-family: 'Raleway', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 28px;
+		color: $blue;
+		margin-bottom: 20px;
+		&-span {
+			color: $grey;
+		}
+	}
+	&__subtitle {
+		font-family: 'Roboto', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		text-transform: uppercase;
+		color: $white;
+		margin-bottom: 15px;
+	}
+	&__address {
+		font-style: normal;
+		line-height: 34px;
+		color: $dark-grey;
+		text-align: center;
+		margin-bottom: 60px;
+		&-span {
+			color: $grey;
+		}
+	}
+	&__icons--wrapper {
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 60px;
+	}
+	&__icons {
+		fill: $white;
+		transition: 0.5s all;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&--card {
+			cursor: pointer;
+			height: 44px;
+			width: 44px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $text-color;
+			border-radius: 50%;
+			margin: 10px;
+			fill: $white;
+			transition: 0.5s all;
+		}
+		&--card:hover {
+			fill: $blue;
+			transform: scale(1.2);
+		}
+		&--card:hover .footer__icons{
+			fill: $blue;
+		}
+	}
+	&__form {
+		margin: 0 auto;
+		&--span {
+			margin-left: 15px;
+		}
+		&--submit {
+			margin: 0 auto;
+			display: flex;
+			height: 50px;
+			color: $text-color;
+			justify-content: center;
+			width: 62.5%;
+			transition: 0.5s all;
+			cursor: pointer;
+			background-color: $dark-grey;
+			font-size: 16px;
+			font-weight: 700;
+			border-radius: 4px;
+			font-family: 'Roboto', sans-serif;
+			align-items: center;
+		}
+		&--svg {
+			fill: $blue;
+		}
+		&--input {
+			margin: 20px auto;
+			border-radius: 5px;
+			display: block;
+			background-color: transparent;
+			border: 1px solid $text-color;
+			padding: 15px 100px 15px 15px;
+			font-family: 'Roboto', sans-serif;
+			color: $grey;
+		}
+		&--submit:hover {
+			background-color: $blue;
+		}
+		&--submit:hover .footer__form--svg {
+			fill: $grey;
+		}
+	}
+	@media screen and (min-width: 375px) {
+		&__form {
+			&--submit {
+				width: 45.5%;
+			}
+			&--input {
+				width: 70.5%;
+			}
+		}
+	}
+	@media screen and (min-width: 425px) {
+		&__form {
+			&--submit {
+				width: 45.5%;
+			}
+			&--input {
+				width: 70.5%;
+			}
+		}
+	}
+	@media screen and (min-width: 425px) {
+		&__info--wrapper {
+			margin: 0 auto;
+			margin-left: 20px;
+		}
+		&__links--wrapper {
+			margin: 0 auto;
+		}
+		&__form {
+
+			&--submit {
+				width: 45.5%;
+			}
+			&--input {
+				width: 70.5%;
+			}
+		}
+	}
+	@media screen and (min-width: 768px) {
+		position: relative;
+		&__title {
+			font-size: 26px;
+		}
+		&__subtitle {
+			font-size: 20px;
+		}
+		&__address {
+			font-size: 20px;
+		}
+		&__info--wrapper {
+			display: inline-block;
+			margin-left: 50px;
+		}
+		&__links--wrapper {
+			display: inline-block;
+			position: absolute;
+			top: 60px;
+			right: 50px;
+		}
+		&__form {
+			&--submit {
+				width: 40.5%;
+			}
+			&--input {
+				width: 72.5%;
+			}
+		}
+	}
+	@media screen and (min-width: 1366px) {
+		display: flex;
+		justify-content: space-between;
+		position: static;
+		&__info--wrapper {
+			display: inline-block;
+			margin-left: 0px;
+			margin: 0;
+		}
+		&__form--wrapper {
+			width: 600px;
+			display: inline-block;
+			position: static;
+			margin-right: -170px;
+			margin: 0;
+		}
+		&__links--wrapper {
+			display: inline-block;
+			position: static;
+			margin: 0 50px;
+		}
+		&__form {
+			&--submit {
+				display: inline-block;
+				width: 20.5%;
+			}
+			&--input {
+				display: inline-block;
+				margin: 20px 20px 20px 20px;
+				width: 71.5%;
+				height: 50px;
+			}
+		}
+	}
+	@media screen and (min-width: 1440px) {
+		&__form {
+			&--wrapper {
+				width: 700px;
+			}
+			&--submit {
+				display: inline-block;
+				width: 20.5%;
+			}
+			&--input {
+				display: inline-block;
+				margin: 20px 20px 20px 20px;
+				width: 72.5%;
+				height: 50px;
+			}
+		}
+	}
+	
+}
