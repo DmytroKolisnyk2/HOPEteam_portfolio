@@ -195,13 +195,11 @@
 	}
 	&__form {
 		margin: 0 auto;
-		&--span {
-			margin-left: 15px;
-		}
 		&--submit {
 			margin: 0 auto;
 			display: flex;
 			height: 50px;
+			max-width: 150px;
 			color: $text-color;
 			justify-content: center;
 			width: 62.5%;
@@ -221,6 +219,7 @@
 			margin: 20px auto;
 			border-radius: 5px;
 			display: block;
+			max-width: 350px;
 			background-color: transparent;
 			border: 1px solid $text-color;
 			padding: 15px 100px 15px 15px;
@@ -304,7 +303,7 @@
 	}
 	@media screen and (min-width: 1366px) {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		position: static;
 		&__info--wrapper {
 			display: inline-block;
@@ -312,7 +311,8 @@
 			margin: 0;
 		}
 		&__form--wrapper {
-			width: 600px;
+			width: 500px;
+			max-width: 600px;
 			display: inline-block;
 			position: static;
 			margin-right: -170px;
@@ -339,7 +339,8 @@
 	@media screen and (min-width: 1440px) {
 		&__form {
 			&--wrapper {
-				width: 700px;
+				width: 500px;
+				max-width: 600px;
 			}
 			&--submit {
 				display: inline-block;
