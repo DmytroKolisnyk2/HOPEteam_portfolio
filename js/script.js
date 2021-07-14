@@ -6,7 +6,7 @@ const wrapperBtnRef = document.querySelector('.section__wrapper__list__btn');
 const renderProjectsFn = (array) => {
   array.map((item) => {
     rootRef.insertAdjacentHTML(
-      "afterbegin",
+      "beforeend",
       `<div class="wrapper__projects-root__card">
     <div class="projects-root__card__wrapperImg">
       <div class='projects-root__card__wrapperImg__wrapper_description'>
@@ -27,42 +27,42 @@ renderProjectsFn(arrayProjects);
 
 
 const onClickBtnFilter = (event) => {
-    const activeBtnRef = event.currentTarget.querySelector('.active');
-    if(event.target.tagName !== 'BUTTON') {
-        return;
-    }
-    if(activeBtnRef) {
-        activeBtnRef.classList.remove('active');
-    }
-    event.target.classList.add('active');
+  const activeBtnRef = event.currentTarget.querySelector('.active');
+  if (event.target.tagName !== 'BUTTON') {
+    return;
+  }
+  if (activeBtnRef) {
+    activeBtnRef.classList.remove('active');
+  }
+  event.target.classList.add('active');
 
-    if(event.target.dataset.value === 'site') {
-        document.querySelectorAll('.wrapper__projects-root__card').forEach(item => {item.remove()});
-       return renderProjectsFn(arrayProjects.filter(item => item.type === 'website'));
-    }
-    if(event.target.dataset.value === 'program') {
-        document.querySelectorAll('.wrapper__projects-root__card').forEach(item => {item.remove()});
-       return renderProjectsFn(arrayProjects.filter(item => item.type === 'web-program'));
-    }
-    if(event.target.dataset.value === 'design') {
-        document.querySelectorAll('.wrapper__projects-root__card').forEach(item => {item.remove()});
-       return renderProjectsFn(arrayProjects.filter(item => item.type === 'design'));
-    }
-    if(event.target.dataset.value === 'all') {
-        document.querySelectorAll('.wrapper__projects-root__card').forEach(item => {item.remove()});
-       return renderProjectsFn(arrayProjects);
-    }
+  if (event.target.dataset.value === 'site') {
+    document.querySelectorAll('.wrapper__projects-root__card').forEach(item => { item.remove() });
+    return renderProjectsFn(arrayProjects.filter(item => item.type === 'website'));
+  }
+  if (event.target.dataset.value === 'program') {
+    document.querySelectorAll('.wrapper__projects-root__card').forEach(item => { item.remove() });
+    return renderProjectsFn(arrayProjects.filter(item => item.type === 'web-program'));
+  }
+  if (event.target.dataset.value === 'design') {
+    document.querySelectorAll('.wrapper__projects-root__card').forEach(item => { item.remove() });
+    return renderProjectsFn(arrayProjects.filter(item => item.type === 'design'));
+  }
+  if (event.target.dataset.value === 'all') {
+    document.querySelectorAll('.wrapper__projects-root__card').forEach(item => { item.remove() });
+    return renderProjectsFn(arrayProjects);
+  }
 };
 
 
 wrapperBtnRef.addEventListener('click', onClickBtnFilter);
-//=======
+
 const closeSideBarRef = document.querySelector(".address__close--js");
 const burgerRef = document.querySelector(".header__burger--js");
 const sideBarRef = document.querySelector(".header__content-wrapper--js");
 const overlayRef = document.querySelector(".form-modal__overlay");
 const closeModalRef = document.querySelector(".form__close--js");
-const openModalRef = document.querySelector(".open-form--js");
+const openModalRef = [...document.querySelectorAll(".open-form--js")];
 const formModalRef = document.querySelector(".form-modal");
 const menuRef = document.querySelector('.menu__list');
 
@@ -97,9 +97,11 @@ const closeCrossBtn = () => {
   formModalRef.classList.add("form-modal--hidden");
   removeListeners();
 };
-openModalRef.addEventListener("click", () => {
-  formModalRef.classList.remove("form-modal--hidden");
-  window.addEventListener("keydown", closeEsc);
-  overlayRef.addEventListener("click", closeOverlay);
-  closeModalRef.addEventListener("click", closeCrossBtn);
+openModalRef.forEach(element => {
+  element.addEventListener("click", () => {
+    formModalRef.classList.remove("form-modal--hidden");
+    window.addEventListener("keydown", closeEsc);
+    overlayRef.addEventListener("click", closeOverlay);
+    closeModalRef.addEventListener("click", closeCrossBtn);
+  })
 });
