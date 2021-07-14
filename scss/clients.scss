@@ -195,13 +195,18 @@
 	}
 	&__form {
 		margin: 0 auto;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+		flex-wrap: wrap;
 		&--submit {
 			margin: 0 auto;
 			display: flex;
 			height: 50px;
 			max-width: 150px;
 			color: $text-color;
-			justify-content: center;
+			justify-content: space-around;
+			align-items: center;
 			width: 62.5%;
 			transition: 0.5s all;
 			cursor: pointer;
@@ -210,10 +215,10 @@
 			font-weight: 700;
 			border-radius: 4px;
 			font-family: 'Roboto', sans-serif;
-			align-items: center;
 		}
 		&--svg {
 			fill: $blue;
+			transition: 0.5s all;
 		}
 		&--input {
 			margin: 20px auto;
@@ -293,6 +298,7 @@
 			right: 50px;
 		}
 		&__form {
+			display: block;
 			&--submit {
 				width: 40.5%;
 			}
@@ -311,12 +317,13 @@
 			margin: 0;
 		}
 		&__form--wrapper {
-			width: 500px;
+			min-width: 550px;
 			max-width: 600px;
 			display: inline-block;
 			position: static;
 			margin-right: -170px;
 			margin: 0;
+			flex-wrap: wrap;
 		}
 		&__links--wrapper {
 			display: inline-block;
@@ -324,9 +331,9 @@
 			margin: 0 50px;
 		}
 		&__form {
+			display: flex;
 			&--submit {
-				display: inline-block;
-				width: 20.5%;
+				width: 28.5%;
 			}
 			&--input {
 				display: inline-block;
@@ -338,18 +345,12 @@
 	}
 	@media screen and (min-width: 1440px) {
 		&__form {
-			&--wrapper {
-				width: 500px;
-				max-width: 600px;
-			}
 			&--submit {
-				display: inline-block;
-				width: 20.5%;
+				width: 30.5%;
 			}
 			&--input {
-				display: inline-block;
 				margin: 20px 20px 20px 20px;
-				width: 72.5%;
+				width: 65.5%;
 				height: 50px;
 			}
 		}
