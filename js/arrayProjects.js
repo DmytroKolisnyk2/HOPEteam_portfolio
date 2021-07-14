@@ -1,0 +1,86 @@
+export default [
+    {
+        link: 'https://igoryakib.github.io/Homeworks/Module%204/',
+        img: '../img/mogo4.png',
+        name: 'Mogo',
+        type: 'website',
+    },
+    {
+        link: 'https://igoryakib.github.io/Homeworks/Module%205/',
+        img: '../img/mogo5.png',
+        name: 'Mogo 2.0',
+        type: 'website', 
+    },
+    {
+        link: 'https://igoryakib.github.io/Homeworks/Module%206/',
+        img: '../img/golden6.png',
+        name: 'Golden',
+        type: 'website',
+    },
+    {
+        link: 'https://igoryakib.github.io/Homeworks/Module%207/',
+        img: '../img/module7.png',
+        name: 'URLAUBSGLÜCK',
+        type: 'website',
+    },
+    {
+        link: 'https://igoryakib.github.io/HomeworkJS/Module8/',
+        img: '../img/module8.png',
+        name: 'Gallery',
+        type: 'website',
+    },
+    {
+        link: 'https://memories-factory.github.io/',
+        img: '../img/memoriesFactory.png',
+        name: 'Memories Factory',
+        type: 'website',
+    },
+    {
+        link: 'https://dmytrokolisnyk2.github.io/ubermensches_project/build/',
+        img: '../img/brawlStarsSite.png',
+        name: 'Brawl Stars Site',
+        type: 'website',
+    },
+    {
+        link: 'https://dmytrokolisnyk2.github.io/HOPE_project/',
+        img: '../img/BrawlStarsGame.png',
+        name: 'Brawl Stars Card Game',
+        type: 'web-program',  
+    },
+    {
+        link: 'https://dmytrokolisnyk2.github.io/GameOFTeens_JAVASCRIPT/',
+        img: '../img/testHope.png',
+        name: 'HOPE Test',
+        type: 'web-program',
+    },
+    {
+        link: 'https://dmytrokolisnyk2.github.io/test-hakaton/index.html',
+        img: '../img/trelloHope.png',
+        name: 'Trello',
+        type: 'web-program',
+    },
+    {
+        link: 'https://dmytrokolisnyk2.github.io/test-hackathon-2.0/index.html',
+        img: '../img/ticTacToeHope.png',
+        name: 'Tic Tac Toe',
+        type: 'web-program',
+    },
+    {
+        link: 'https://drive.google.com/drive/folders/1wAH_kiUZqV4wfC4dzmSD1a4UIO-92GpI',
+        img: '../img/logo.jpg',
+        name: 'Design logo 1',
+        type: 'design',
+    },
+    {
+        link: 'https://drive.google.com/drive/folders/1wAH_kiUZqV4wfC4dzmSD1a4UIO-92GpI',
+        img: '../img/logo2.jpg',
+        name: 'Design logo 2',
+        type: 'design',
+    },
+    {
+        link: 'https://drive.google.com/drive/folders/1wAH_kiUZqV4wfC4dzmSD1a4UIO-92GpI',
+        img: '../img/logo3.jpg',
+        name: 'Design logo 3',
+        type: 'design',
+    },
+]
