@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .ourProjects__section {
     margin: 0 auto;
 }
@@ -42,6 +44,7 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 70px;
 }
 
 .wrapper__projects-root__card {
@@ -52,10 +55,17 @@
     margin-bottom: 30px;
     border: 3.5px solid $grey;
     border-radius: 5px;
-}
-
-.wrapper__projects-root__card:last-child {
-    margin-bottom: 0;
+    transition: 500ms all;
+    cursor: pointer;
+    &:hover .projects-root__card__wrapperImg__wrapper_description {
+        opacity: 0.9;
+        pointer-events: initial;
+        visibility: initial;
+        transition: 500ms all;
+    }
+    &:hover {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
 }
 
 .projects-root__card__wrapperImg {
@@ -84,6 +94,13 @@
     color: $text-color;
     font-weight: 800;
     font-size: 18px;
+    & a{
+        color: $text-color;
+        transition: 200ms linear;
+    }
+    &:hover a{
+       color: $blue;
+    }
 }
 
 .wrapper__projects-root__card__subtitle {
@@ -91,10 +108,31 @@
     font-weight: 500;
     font-size: 16px;
     font-family: $main-font;
+    &::first-letter {
+        text-transform: uppercase;
+    }
 }
 
-a{
-    color: $text-color;
+.projects-root__card__wrapperImg__wrapper_description {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    width: 340px;
+    height: 240px;
+    background-color: $blue;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 500ms all;
+}
+
+.projects-root__card__description {
+    color: $white;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: $main-font;
 }
 
 .active {

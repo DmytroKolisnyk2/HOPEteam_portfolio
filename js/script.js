@@ -9,7 +9,10 @@ const renderProjectsFn = (array) => {
       "afterbegin",
       `<div class="wrapper__projects-root__card">
     <div class="projects-root__card__wrapperImg">
-      <img class="projects-root__card__Img" src="${item.img}" alt="img_project">
+      <div class='projects-root__card__wrapperImg__wrapper_description'>
+      <p class='projects-root__card__description'>${item.description}</p>
+      </div>
+    <img class="projects-root__card__Img" src="${item.img}" alt="img_project">
     </div>
     <div class="wrapper__projects-root__card__wrapper__text">
       <h3 class="wrapper__projects-root__card__title"><a target='_blank' href="${item.link}">${item.name}</a></h3>
