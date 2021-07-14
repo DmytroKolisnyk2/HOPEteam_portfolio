@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+//! font-family: 'Raleway', sans-serif;
+//! font-family: 'Roboto', sans-serif; 
+
+.regular {
+	width: 320px;
+	margin: 60px auto;
+	&__title {
+		font-family: 'Roboto', sans-serif;
+		font-size: 28px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 33px;
+		text-align: center;
+		text-align: center;
+		margin-bottom: 15px;
+	}
+	&__wrapper {
+		margin: 0 auto;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	&__card {
+		border: 2px solid $dark-grey;
+		border-radius: 4px;
+		height: 92px;
+    width: 45%;
+    margin: 8px;
+		transition: 0.5s all;
+		border-radius: 4px;
+		opacity: 0.8;
+		cursor: pointer;
+		&-img {
+			fill: $dark-grey;
+			position: relative;
+			align-items: center;
+			opacity: 0.8;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			transition: 0.5s all;
+		}
+	}
+	&__card:hover {
+		opacity: 1;
+		border: 2px solid $blue;
+	}
+	&__card:hover &__card-img {
+		opacity: 1;
+		fill: $blue;
+	}
+	@media screen and (min-width: 375px) {
+		width: 375px;
+		&__card {
+			width: 43.75%;
+			margin: 20px 10px 0 10px;
+		}
+	}
+	@media screen and (min-width: 425px) {
+		width: 425px;
+		&__card {
+			width: 43.75%;
+			margin: 20px 10px 0 15px;
+		}
+		
+	}
+	@media screen and (min-width: 480px) {
+		width: 480px;
+		&__card {
+			width: 43.75%;
+			margin: 30px 15px 0 15px;
+		}
+	}
+	@media screen and (min-width: 768px) {
+		width: 768px;
+		&__title {
+			font-size: 48px;
+		}
+		&__card {
+			width: 29.42%;
+		}
+	}
+	@media screen and (min-width: 1024px) {
+		width: 1024px;
+		&__title {
+			font-size: 56px;
+		}
+		&__card {
+			width: 14%;
+			margin: 30px 15px 0px 10px;
+		}
+	}
+	@media screen and (min-width: 1366px) {
+		width: 1366px;
+		&__title {
+			font-size: 48px;
+		}
+		&__card {
+			width: 30%;
+			margin: 30px 15px 0 15px;
+		}
+	}
+	@media screen and (min-width: 1440px) {
+		width: 1440px;
+		&__title {
+			font-size: 56px;
+		}
+		&__card {
+			width:11.8055%;
+		}
+	}
+	@media screen and (min-width: 2560px) {
+		width: 2560px;
+		&__title {
+			font-size: 72px;
+		}
+		&__card {
+			width: 15%;
+		}
+	}
+}
+.footer {
+	background-color: $footer-color;
+	width: 100%;
+	margin: 0 auto;
+	padding: 60px 0px;
+	&__title {
+		text-align: center;
+		font-family: 'Raleway', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 28px;
+		color: $blue;
+		margin-bottom: 20px;
+		&-span {
+			color: $grey;
+		}
+	}
+	&__subtitle {
+		font-family: 'Roboto', sans-serif;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		text-transform: uppercase;
+		color: $white;
+		margin-bottom: 15px;
+	}
+	&__address {
+		font-style: normal;
+		line-height: 34px;
+		color: $dark-grey;
+		text-align: center;
+		margin-bottom: 60px;
+		&-span {
+			color: $grey;
+		}
+	}
+	&__icons--wrapper {
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		margin-bottom: 60px;
+	}
+	&__icons {
+		fill: $white;
+		transition: 0.5s all;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&--card {
+			cursor: pointer;
+			height: 44px;
+			width: 44px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: $text-color;
+			border-radius: 50%;
+			margin: 10px;
+			fill: $white;
+			transition: 0.5s all;
+		}
+		&--card:hover {
+			fill: $blue;
+			transform: scale(1.2);
+		}
+		&--card:hover .footer__icons{
+			fill: $blue;
+		}
+	}
+	&__form {
+		margin: 0 auto;
+		display: flex;
+    justify-content: center;
+    align-items: center;
+		flex-wrap: wrap;
+		&--submit {
+			margin: 0 auto;
+			display: flex;
+			height: 50px;
+			max-width: 150px;
+			color: $text-color;
+			justify-content: space-around;
+			align-items: center;
+			width: 62.5%;
+			transition: 0.5s all;
+			cursor: pointer;
+			background-color: $dark-grey;
+			font-size: 16px;
+			font-weight: 700;
+			border-radius: 4px;
+			font-family: 'Roboto', sans-serif;
+		}
+		&--svg {
+			fill: $blue;
+			transition: 0.5s all;
+		}
+		&--input {
+			margin: 20px auto;
+			border-radius: 5px;
+			display: block;
+			max-width: 350px;
+			background-color: transparent;
+			border: 1px solid $text-color;
+			padding: 15px 100px 15px 15px;
+			font-family: 'Roboto', sans-serif;
+			color: $grey;
+		}
+		&--submit:hover {
+			background-color: $blue;
+		}
+		&--submit:hover .footer__form--svg {
+			fill: $grey;
+		}
+	}
+	@media screen and (min-width: 375px) {
+		&__form {
+			&--submit {
+				width: 45.5%;
+			}
+			&--input {
+				width: 70.5%;
+			}
+		}
+	}
+	@media screen and (min-width: 425px) {
+		&__form {
+			&--submit {
+				width: 45.5%;
+			}
+			&--input {
+				width: 70.5%;
+			}
+		}
+	}
+	@media screen and (min-width: 425px) {
+		&__info--wrapper {
+			margin: 0 auto;
+			margin-left: 20px;
+		}
+		&__links--wrapper {
+			margin: 0 auto;
+		}
+		&__form {
+
+			&--submit {
+				width: 45.5%;
+			}
+			&--input {
+				width: 70.5%;
+			}
+		}
+	}
+	@media screen and (min-width: 768px) {
+		position: relative;
+		&__title {
+			font-size: 26px;
+		}
+		&__subtitle {
+			font-size: 20px;
+		}
+		&__address {
+			font-size: 20px;
+		}
+		&__info--wrapper {
+			display: inline-block;
+			margin-left: 50px;
+		}
+		&__links--wrapper {
+			display: inline-block;
+			position: absolute;
+			top: 60px;
+			right: 50px;
+		}
+		&__form {
+			display: block;
+			&--submit {
+				width: 40.5%;
+			}
+			&--input {
+				width: 72.5%;
+			}
+		}
+	}
+	@media screen and (min-width: 1366px) {
+		display: flex;
+		justify-content: space-around;
+		position: static;
+		&__info--wrapper {
+			display: inline-block;
+			margin-left: 0px;
+			margin: 0;
+		}
+		&__form--wrapper {
+			min-width: 550px;
+			max-width: 600px;
+			display: inline-block;
+			position: static;
+			margin-right: -170px;
+			margin: 0;
+			flex-wrap: wrap;
+		}
+		&__links--wrapper {
+			display: inline-block;
+			position: static;
+			margin: 0 50px;
+		}
+		&__form {
+			display: flex;
+			&--submit {
+				width: 28.5%;
+			}
+			&--input {
+				display: inline-block;
+				margin: 20px 20px 20px 20px;
+				width: 71.5%;
+				height: 50px;
+			}
+		}
+	}
+	@media screen and (min-width: 1440px) {
+		&__form {
+			&--submit {
+				width: 30.5%;
+			}
+			&--input {
+				margin: 20px 20px 20px 20px;
+				width: 65.5%;
+				height: 50px;
+			}
+		}
+	}
+	
+}
