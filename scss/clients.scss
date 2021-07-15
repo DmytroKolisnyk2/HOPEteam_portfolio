@@ -1,12 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
-//! font-family: 'Raleway', sans-serif;
-//! font-family: 'Roboto', sans-serif; 
-
 .regular {
 	width: 320px;
 	margin: 60px auto;
 	&__title {
-		font-family: 'Roboto', sans-serif;
+		font-family: $main-font;
 		font-size: 28px;
 		font-style: normal;
 		font-weight: 700;
@@ -140,7 +136,7 @@
 		}
 	}
 	&__subtitle {
-		font-family: 'Roboto', sans-serif;
+		font-family: $main-font;
 		font-style: normal;
 		font-weight: 700;
 		font-size: 14px;
@@ -214,7 +210,7 @@
 			font-size: 16px;
 			font-weight: 700;
 			border-radius: 4px;
-			font-family: 'Roboto', sans-serif;
+			font-family: $main-font;
 		}
 		&--svg {
 			fill: $blue;
@@ -228,7 +224,7 @@
 			background-color: transparent;
 			border: 1px solid $text-color;
 			padding: 15px 100px 15px 15px;
-			font-family: 'Roboto', sans-serif;
+			font-family: $main-font;
 			color: $grey;
 		}
 		&--submit:hover {
