@@ -90,7 +90,8 @@ const closeEsc = (event) => {
     removeListeners();
   }
 };
-const closeOverlay = () => {
+const closeOverlay = (event) => {
+  if (event.target !== event.currentTarget) return;
   formModalRef.classList.add("form-modal--hidden");
   removeListeners();
 };
