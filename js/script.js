@@ -70,6 +70,7 @@ menuRef.addEventListener('click', (event) => {
   if (!event.target.classList.contains('menu__link')) return;
   [...event.currentTarget.children].forEach(element => element.firstElementChild.classList.remove('menu__link--active'))
   event.target.classList.add('menu__link--active');
+  sideBarRef.classList.remove("header__content-wrapper--active")
 });
 burgerRef.addEventListener("click", () =>
   sideBarRef.classList.add("header__content-wrapper--active")
