@@ -105,5 +105,50 @@ openModalRef.forEach(element => {
     window.addEventListener("keydown", closeEsc);
     overlayRef.addEventListener("click", closeOverlay);
     closeModalRef.addEventListener("click", closeCrossBtn);
-  })
+	})
+	// document.querySelector(".form__submit").addEventListener('click', phoneValid);
+	// document.querySelector(".form__submit").addEventListener('click', isCheckboxChecked);
 });
+
+function phoneValid() {
+	formRemoveError(document.getElementById("phone"));
+  const validNumber = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+  if(!document.getElementById("phone").value.match(validNumber)){
+		document.getElementById("number__span").textContent = "Enter a valid phone number!";
+		formAddError(document.getElementById("phone"));
+		document.querySelector(".form").onsubmit = function () {
+			return false;
+		}
+	}
+	else {
+		document.getElementById("number__span").textContent = "";
+		document.querySelector(".form").action = "https://formspree.io/f/mdoyldre";
+		formModalRef.classList.add("form-modal--hidden");
+		document.querySelector(".form").onsubmit = function () {
+			return true;
+		}
+		removeListeners();
+		return true;
+  }
+}
+// function isCheckboxChecked() {
+// 	if (!document.getElementById("checkbox").checked) {
+// 		formAddError(document.getElementById("checkbox"));
+// 	}
+// 	else {
+// 		formRemoveError(document.getElementById("checkbox"));
+// 		formModalRef.classList.add("form-modal--hidden");
+// 		removeListeners();
+// 	}
+// };
+function formAddError(input) {
+	input.parentNode.classList.add("_error");
+	input.classList.add("_error")
+}
+function formRemoveError(input) {
+	input.parentNode.classList.remove("_error");
+	input.classList.remove("_error");
+}
+
+document.querySelector(".form__submit").addEventListener('click', phoneValid);
+// document.querySelector(".form__submit").addEventListener('click', isCheckboxChecked);

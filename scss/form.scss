@@ -210,3 +210,12 @@
     right: 10px;
   }
 }
+.error__span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  color: #df0c0c;
+  font-size: 20px;
+}
+.form__text._error {
+  box-shadow: 0 0 15px #df0c0c;
+}
