@@ -84,6 +84,7 @@ const closeModalRef = document.querySelector(".form__close--js");
 const openModalRef = [...document.querySelectorAll(".open-form--js")];
 const formModalRef = document.querySelector(".form-modal");
 const scrollArrowRef = document.querySelector('.main__arrow');
+const menuRef =document.querySelector('.menu');
 menuRef.addEventListener("click", (event) => {
   if (!event.target.classList.contains("menu__link")) return;
   [...event.currentTarget.children].forEach((element) =>
