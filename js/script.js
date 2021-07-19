@@ -107,8 +107,6 @@ openModalRef.forEach(element => {
     overlayRef.addEventListener("click", closeOverlay);
     closeModalRef.addEventListener("click", closeCrossBtn);
 	})
-	// document.querySelector(".form__submit").addEventListener('click', phoneValid);
-	// document.querySelector(".form__submit").addEventListener('click', isCheckboxChecked);
 });
 
 function phoneValid() {
@@ -132,16 +130,7 @@ function phoneValid() {
 		return true;
   }
 }
-// function isCheckboxChecked() {
-// 	if (!document.getElementById("checkbox").checked) {
-// 		formAddError(document.getElementById("checkbox"));
-// 	}
-// 	else {
-// 		formRemoveError(document.getElementById("checkbox"));
-// 		formModalRef.classList.add("form-modal--hidden");
-// 		removeListeners();
-// 	}
-// };
+
 function formAddError(input) {
 	input.parentNode.classList.add("_error");
 	input.classList.add("_error")
@@ -152,10 +141,6 @@ function formRemoveError(input) {
 }
 
 document.querySelector(".form__submit").addEventListener('click', phoneValid);
-// document.querySelector(".form__submit").addEventListener('click', isCheckboxChecked);
-
-  })
-});
 window.addEventListener('scroll', _.throttle(() => {
   if (window.pageYOffset > 680) {
     scrollArrowRef.classList.remove('main__arrow--hidden')
