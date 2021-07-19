@@ -52,7 +52,42 @@
     </section>
     <section class="form-modal form-modal--hidden">
       <div class="form-modal__overlay">
-        <form action="#" class="form" method="GET"> <svg class="form__close form__close--js">
+        <form action="#" target="_blank" method="POST" class="form">
+          <svg class="form__close form__close--js">
+            <use href="./img/header-ico.svg#icon-close"></use>
+          </svg>
+          <h2 class="form__headline">Leave your details, we will call you back soon</h2>
+          <div class="form__input-wrapper"><input id="name" type="text" name="Name" class="form__text" required>
+            <label for="name" class="form__label">Your name</label>
+            <svg class="form__ico">
+              <use href="./img/header-ico.svg#icon-contact"></use>
+            </svg>
+          </div>
+          <div class="form__input-wrapper"><input id="phone" type="tel" name="Phone" class="form__text" required>
+            <label for="phone" class="form__label">Phone number</label>
+            <svg class="form__ico">
+              <use href="./img/header-ico.svg#icon-phone"></use>
+            </svg>
+          </div>
+          <span class="error__span" id="number__span"></span>
+          <div class="form__input-wrapper"><input id="email" type="email" name="Email" class="form__text" required>
+            <label for="email" class="form__label">E-mail</label>
+            <svg class="form__ico">
+              <use href="./img/header-ico.svg#icon-envelope"></use>
+            </svg>
+          </div>
+          <div class="form__textarea-wrapper">
+            <textarea name="Message" id="comment" class="form__textarea"
+              placeholder="Type your comment here..." required></textarea>
+            <label for="comment" class="form__label">Comment</label>
+          </div>
+          <div class="form__checkbox-wrapper">
+            <input id="checkbox" type="checkbox" class="form__checkbox" required>
+            <label for="checkbox" class="form__checkbox-label">I agree to the processing of personal data
+            </label>
+          </div>
+          <button class="form__submit" type="submit" >Submit</button>
+<!--         <form action="#" class="form" method="GET"> <svg class="form__close form__close--js">
             <use href="./img/symbol-defs.svg#icon-close"></use>
           </svg>
           <h2 class="form__headline">Leave your details, we will call you back soon</h2>
@@ -74,6 +109,7 @@
           <div class="form__checkbox-wrapper"> <input id="checkbox" type="checkbox" class="form__checkbox"> <label
               for="checkbox" class="form__checkbox-label">I agree to the processing of personal data </label> </div>
           <button class="form__submit" type="submit">Submit</button>
+ -->
         </form>
       </div>
     </section>
