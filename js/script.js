@@ -11,8 +11,9 @@ const renderProjectsFn = (array) => {
     <div class="projects-root__card__wrapperImg">
       <div class='projects-root__card__wrapperImg__wrapper_description'>
       <p class='projects-root__card__description'>${item.description}</p>
-      </div>
-    <img class="projects-root__card__Img" src="${item.img}" alt="img_project">
+      </div><picture>
+      <source srcset="${item.webp}" type="image/webp">
+    <img class="projects-root__card__Img" src="${item.img}" alt="img_project"></picture>
     </div>
     <div class="wrapper__projects-root__card__wrapper__text">
       <h3 class="wrapper__projects-root__card__title"><a target='_blank' href="${item.link}">${item.name}</a></h3>
@@ -22,7 +23,6 @@ const renderProjectsFn = (array) => {
     );
   });
 };
-
 renderProjectsFn(arrayProjects);
 
 
@@ -65,6 +65,7 @@ const closeModalRef = document.querySelector(".form__close--js");
 const openModalRef = [...document.querySelectorAll(".open-form--js")];
 const formModalRef = document.querySelector(".form-modal");
 const menuRef = document.querySelector('.menu__list');
+const scrollArrowRef = document.querySelector('.main__arrow');
 
 menuRef.addEventListener('click', (event) => {
   if (!event.target.classList.contains('menu__link')) return;
@@ -107,3 +108,10 @@ openModalRef.forEach(element => {
     closeModalRef.addEventListener("click", closeCrossBtn);
   })
 });
+window.addEventListener('scroll', _.throttle(() => {
+  if (window.pageYOffset > 680) {
+    scrollArrowRef.classList.remove('main__arrow--hidden')
+  } else {
+    scrollArrowRef.classList.add('main__arrow--hidden')
+  }
+}, 400));
