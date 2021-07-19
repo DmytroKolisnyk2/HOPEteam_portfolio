@@ -1,7 +1,7 @@
 import arrayProjects from "./arrayProjects.js";
 
 const rootRef = document.querySelector(".section__wrapper__projects-root");
-const wrapperBtnRef = document.querySelector('.section__wrapper__list__btn');
+const wrapperBtnRef = document.querySelector(".section__wrapper__list__btn");
 
 const renderProjectsFn = (array) => {
   array.map((item) => {
@@ -25,37 +25,56 @@ const renderProjectsFn = (array) => {
 };
 renderProjectsFn(arrayProjects);
 
-
 const onClickBtnFilter = (event) => {
-  const activeBtnRef = event.currentTarget.querySelector('.active');
-  if (event.target.tagName !== 'BUTTON') {
+  const activeBtnRef = event.currentTarget.querySelector(".active");
+  if (
+    event.target.tagName !== "BUTTON" ||
+    event.target.classList.contains("active")
+  ) {
     return;
   }
   if (activeBtnRef) {
-    activeBtnRef.classList.remove('active');
+    activeBtnRef.classList.remove("active");
   }
-  event.target.classList.add('active');
+  event.target.classList.add("active");
+  rootRef.classList.add("wrapper__projects-root__card--hidden");
+  document.querySelectorAll(".wrapper__projects-root__card").forEach((item) => {
+    item.remove();
+  });
+  if (event.target.dataset.value === "site") {
+    setTimeout(() => {
+      rootRef.classList.remove("wrapper__projects-root__card--hidden");
+    }, 500);
 
-  if (event.target.dataset.value === 'site') {
-    document.querySelectorAll('.wrapper__projects-root__card').forEach(item => { item.remove() });
-    return renderProjectsFn(arrayProjects.filter(item => item.type === 'website'));
+    return renderProjectsFn(
+      arrayProjects.filter((item) => item.type === "website")
+    );
   }
-  if (event.target.dataset.value === 'program') {
-    document.querySelectorAll('.wrapper__projects-root__card').forEach(item => { item.remove() });
-    return renderProjectsFn(arrayProjects.filter(item => item.type === 'web-program'));
+  if (event.target.dataset.value === "program") {
+    setTimeout(() => {
+      rootRef.classList.remove("wrapper__projects-root__card--hidden");
+    }, 500);
+    return renderProjectsFn(
+      arrayProjects.filter((item) => item.type === "web-program")
+    );
   }
-  if (event.target.dataset.value === 'design') {
-    document.querySelectorAll('.wrapper__projects-root__card').forEach(item => { item.remove() });
-    return renderProjectsFn(arrayProjects.filter(item => item.type === 'design'));
+  if (event.target.dataset.value === "design") {
+    setTimeout(() => {
+      rootRef.classList.remove("wrapper__projects-root__card--hidden");
+    }, 500);
+    return renderProjectsFn(
+      arrayProjects.filter((item) => item.type === "design")
+    );
   }
-  if (event.target.dataset.value === 'all') {
-    document.querySelectorAll('.wrapper__projects-root__card').forEach(item => { item.remove() });
+  if (event.target.dataset.value === "all") {
+    setTimeout(() => {
+      rootRef.classList.remove("wrapper__projects-root__card--hidden");
+    }, 500);
     return renderProjectsFn(arrayProjects);
   }
 };
 
-
-wrapperBtnRef.addEventListener('click', onClickBtnFilter);
+wrapperBtnRef.addEventListener("click", onClickBtnFilter);
 
 const closeSideBarRef = document.querySelector(".address__close--js");
 const burgerRef = document.querySelector(".header__burger--js");
@@ -64,14 +83,14 @@ const overlayRef = document.querySelector(".form-modal__overlay");
 const closeModalRef = document.querySelector(".form__close--js");
 const openModalRef = [...document.querySelectorAll(".open-form--js")];
 const formModalRef = document.querySelector(".form-modal");
-const menuRef = document.querySelector('.menu__list');
 const scrollArrowRef = document.querySelector('.main__arrow');
-
-menuRef.addEventListener('click', (event) => {
-  if (!event.target.classList.contains('menu__link')) return;
-  [...event.currentTarget.children].forEach(element => element.firstElementChild.classList.remove('menu__link--active'))
-  event.target.classList.add('menu__link--active');
-  sideBarRef.classList.remove("header__content-wrapper--active")
+menuRef.addEventListener("click", (event) => {
+  if (!event.target.classList.contains("menu__link")) return;
+  [...event.currentTarget.children].forEach((element) =>
+    element.firstElementChild.classList.remove("menu__link--active")
+  );
+  event.target.classList.add("menu__link--active");
+  sideBarRef.classList.remove("header__content-wrapper--active");
 });
 burgerRef.addEventListener("click", () =>
   sideBarRef.classList.add("header__content-wrapper--active")
@@ -100,7 +119,7 @@ const closeCrossBtn = () => {
   formModalRef.classList.add("form-modal--hidden");
   removeListeners();
 };
-openModalRef.forEach(element => {
+openModalRef.forEach((element) => {
   element.addEventListener("click", () => {
     formModalRef.classList.remove("form-modal--hidden");
     window.addEventListener("keydown", closeEsc);
@@ -148,4 +167,3 @@ window.addEventListener('scroll', _.throttle(() => {
     scrollArrowRef.classList.add('main__arrow--hidden')
   }
 }, 400));
-
