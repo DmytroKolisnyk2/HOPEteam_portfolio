@@ -44,7 +44,7 @@ const onClickBtnFilter = (event) => {
   if (event.target.dataset.value === "site") {
     setTimeout(() => {
       rootRef.classList.remove("wrapper__projects-root__card--hidden");
-    }, 500);
+    }, 200);
 
     return renderProjectsFn(
       arrayProjects.filter((item) => item.type === "website")
