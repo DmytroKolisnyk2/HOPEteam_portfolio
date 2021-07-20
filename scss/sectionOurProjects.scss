@@ -1,5 +1,3 @@
-@import "./variables.scss";
-
 .ourProjects__section {
     margin: 0 auto;
 }
@@ -59,8 +57,8 @@
 
 .wrapper__projects-root__card--hidden {
     opacity: 0;
-    transform: scale(0.9);
-    transition: 500ms all;
+    transform: scale(0.7);
+    transition: 200ms all;
     right: 120vw;
 }
 
@@ -109,6 +107,7 @@
 }
 
 .wrapper__projects-root__card__title {
+    display: inline-block;
     margin-bottom: 10px;
     font-family: $main-font;
     color: $text-color;
@@ -120,6 +119,7 @@
     }
     &:hover a {
         color: $blue;
+        text-decoration: underline;
     }
 }
 

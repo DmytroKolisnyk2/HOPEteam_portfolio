@@ -200,7 +200,7 @@ ul {
   top: 0;
   right: -150%;
   min-height: 100vh;
-  z-index: 6;
+  z-index: 9;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -236,10 +236,10 @@ ul {
   font-family: $logo-font;
   font-weight: 700;
   line-height: 33px;
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
   span {
     color: $blue;
-    margin-right: 3px;
+    // margin-right: 3px;
   }
 }
 .menu__link {

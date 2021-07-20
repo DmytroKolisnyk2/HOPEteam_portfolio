@@ -461,6 +461,7 @@
   height: 24px;
   width: 24px;
 }
-.footer__form--submit:hover .footer__form--svg use{
+.footer__form--submit:hover .footer__form--svg use {
   fill: $blue;
+  transition: 0.5s all;
 }
