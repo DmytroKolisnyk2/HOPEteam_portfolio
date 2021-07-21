@@ -33,7 +33,7 @@ export default [
       "URLAUBSGLÜCK is a simple landing page with adaptivity on mobile, tablet and desktop device.",
   },
   {
-    link: "https://igoryakib.github.io/HomeworkJS/Module8/",
+    link: "https://dmytrokolisnyk2.github.io/homeworkJS/module-8/",
     img: "./img/module8.png",
     webp: "./img/module8.webp",
     name: "Gallery",
